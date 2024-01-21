@@ -1,0 +1,45 @@
+0. minikube version  -->>> to see the if minikube is installed. it will return its version.
+
+1. minikube start --driver=docker     -->>> to start the single node cluster using docker driver
+
+2. minikube status    -->> to see its status
+
+3. kubectl cluster-info  --->> to verify if the single node cluster was created prviously
+
+4. kubectl get node  -->>> to see info about node
+
+
+5. minikube docker-env        -->>>> to allow kubernets to pull local docker images
+it will return a few lines chose the last line and run it. e.g the following line
+ @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
+
+6. docker images  --->>> it will show you docker images but still we dont have ours docker images
+so first we must change the directory and go to the directory of the project where there is dockerfile
+now build the docker image using the following command
+
+7. docker build -t springboot-k8s-demo:4.0 .  -->>it will create the image now to run it inside the pod we must create deployment object before(which manages pods) o use commands o use yaml file
+
+8. kubectl create deployment deploymentname --image=springboot-k8s-demo:2.1 --port=8080
+Now to verify the deployment if its created or not use this
+
+9. kubectl get deployment
+
+10. kubectl describe deployment  -->>> it will gives info about the deployment
+
+11. kubectl get pods  -->> to see the status of pods
+
+12. kubectl logs podName   -->> it will shows u the logs of a specific pod
+
+to make our pod i.e our docker image(APIs) available for outside world we must expose our deployment
+
+13. kubectl expose deploymentName --type=NodePort          -->> nodePort is the service name
+it will return "service/deploymentName exposed"
+
+14. kubectl get service  -->> it will return your service information port etc
+
+15. minikube service serviceName --url    -->>>> it will return the url of the service with which you can access your container which is inside the pod
+
+16. minikube dashboard  -->> it will gives you a url to see your dashboard.
+
+$$minikube stop   -->> to stop the cluster
+$$minikube delete -->> to delete the cluster 

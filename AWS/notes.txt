@@ -1,0 +1,47 @@
+key pair : this key is created so you can connect from your computer to this virtual machine you are creating via this 
+key pair i.e ssh to ec2 instance(vm)
+
+* After you create the EC2 instance , go to the folder where you have downloaded the ssh-key i.e key pair
+and execute the following command :
+
+--- $ssh -i SSH-APP.pem ubuntu@public_ip_address_of_ec2_instance e.g ssh -i SSH-APP.pem ubuntu@13.53.132.127
+if it says your key is too open and not too secure then on windows terminal use the following three commands :
+---icacls.exe SSH-APP.pem /reset
+---icacls.exe SSH-APP.pem /grant:r "$($env:username):(r)"
+---icacls.exe SSH-APP.pem /inheritance:r
+on ubunto terminal its simple chmod 400 filename.pem .
+after that you will enter into your aws ec2 instance now execute the following commands
+
+---sudo apt update
+
+* then in our case to use jenkins we must install java 11 on our ec2 instance(machine) first
+--- sudo apt install openjdk-11-jre
+--- java --version
+
+* then use the following commands(got from jenkins website)-->link https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+* check if jenkins is installed or not use : 
+   ---systemctl status jenkins   -->> it will give you a password like this : 516c3c76bb9c4b9aa3e3d63780be291d
+We also creaed a new inbound rule i.e added a port 8080 through which we can access jenkins so public ip + port
+ i.e 13.53.132.127:8080 -->>to access jenkins
+
+*to change the host name i.e the name on terminal where you add commands.
+---sudo hostnamectl set-hostname sonarqube
+---/bin/bash
+
+*same as before on the instance of sonarqube do the ---sudo apt update and then install sonarqube on this instance but before that
+install java 17 as needed by sonarqube
+---sudo apt install openjdk-17-jre 
+
+* Now go to sonarqube website and dont click on the download button on comunity edition but copy the link use this command :
+---wget link_paste_here
+but but but....the free tier ubunto "t3.micro" with 2vCPU and 1 GiB Memory sonarqube will not work. it works with at least
+t3.medium i.e 2CPU and 4 GiB Memory.

@@ -1,0 +1,7 @@
+What is jenkins ?
+Jenkins is a continous integration tool used to build(build,test) code and deploy it to the production.
+Jenkins provides hundreds of plugins to support building,deploying and automating any project.
+it is server-based system that runs in servlet containers such as Apache tomcat.
+It supports version control tools ike SVN, Git to automate build.
+
+password  :  a6847e5d3593420d887f4e90b6e596e1

@@ -1,0 +1,19 @@
+kubernetes is a set of machines called nodes.
+each node consists of pods and each pod consists of containers.
+
+We can have one node kubernetes cluster or multiple nodes cluster.
+Each pod has a unique IP address.
+
+Replica set :  is the back up of your pod. i.e if your pod goes down and not working then you
+have its replica which you use
+
+Deployment : are kubernetes objects that are used for managing pods.
+
+secrets and ConfigMap : used to store sensitive informations of your applications. so the best
+practice is to store your sensitive informations like password as we write in applications.properties 
+file and if we need to change it we rebuild our application and create a new docker image so why 
+not we just put those informations in kubernetes secrets and configMap to make our life easier
+
+ETCD : kubernetes uses etcd as a key-value database store. it stores the configuration of the
+kubernetes cluster in etcd.
+It stores all the secrets and configMap data inside etcd database.
