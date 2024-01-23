@@ -1,0 +1,24 @@
+instance : An instance is a virtual server(VM) for running applications on Amazon's EC2. it has its own Hard drive, network connection , OS etc
+but it is actually all virtual.
+
+CloudWatch : is a monitoring and management service.
+
+security groups : is like a firewall to your instance. its for security purposes.
+
+Elastic Beanstalk : When we create this Elastic beanstalk environment at that time it will create a EC2 instance by itself and inside that instance
+it will register tomcat server and so inside that tomcat server we can deploy our web application and our web application war file will be stored
+in S3 Bucket and from that S3 bucket the EC2 instance will load the war file and it will deploy it in tomcat server.
+
+We upload War file to tomcat server
+
+IAM : identity access management : we first add a group and then to that group we add users and then policies
+
+subnets :  are logical subdivision of a larger network
+
+route table : contains a set of rules used to determine where network traffic from your VPC is directed.
+
+VPC : virtual private cloud. with amazon vpc you can host a web application with additional layer of privacy and security
+
+Amazon Route 53 : is a highly available and scalable cloud domain name system or dns web service.
+
+
