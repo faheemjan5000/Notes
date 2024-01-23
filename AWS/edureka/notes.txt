@@ -21,4 +21,14 @@ VPC : virtual private cloud. with amazon vpc you can host a web application with
 
 Amazon Route 53 : is a highly available and scalable cloud domain name system or dns web service.
 
+CloudFront : if you access a particular website from a region which is far a way from the server hosting the website then its difficult to access it
+            in a short time its tedius and time expensive so we use cloudFront to make the process faster and faster.
+
+Cloud based Monitoring :   we need this monitoring for two basic reasons 1.if lets say during night time only a few ppl use our application/website so most of the servers or CPUs are idle
+                           so we must have set an alarm to notify us to shut down the servers or take some appropriate action.
+                           2. if we dont have this monitoring and if someday there is a downtime on our website i.e our website does not work for a period of time then we may lose
+                             our potential customers which access our website. so that's why we need 'Cloud Based Moniotoring' system.
+
+
+CloudWatch : 
 
