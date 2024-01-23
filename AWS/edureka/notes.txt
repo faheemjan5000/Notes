@@ -30,5 +30,10 @@ Cloud based Monitoring :   we need this monitoring for two basic reasons 1.if le
                              our potential customers which access our website. so that's why we need 'Cloud Based Moniotoring' system.
 
 
-CloudWatch : 
+CloudWatch : is a powerful monitoring tool. amazon cloudwatch is the component of Amazon Web services that provides real time monitoring of AWS resources and customers applications
+             running on amazon infrastructure. example at 04:25
+
+Amazon CloudWatch events : 04:34 . An event indicates a change in your AWS environment. AWS resource generate events when their state changes.e.g when the state of a EC2 instance
+                           changes from active to stop or from active to terminated so in this way an event is generated.
+Tomorrow starts from 4.37
 
