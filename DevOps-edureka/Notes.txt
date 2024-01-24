@@ -1,1 +1,15 @@
-start from 02:18:00
+Docker :
+        1.client : docker build, docker pull, docker run   -->> a cli where we execute commands
+        2.Docker host :  docker daemon , images, containers -->>docker daemon builds your image and save it the registry
+        3.Registry(docker hub)
+container -->> a running instance of a docker image is called container , every application runs inside a docker container
+
+docker compose : suppose you have multiple applications in various containers and all those containers are linked together so you don't want to run
+                 those containers one by one but you want to run them with a single command so that's when docker compose comes into picture. so
+                 with docker compose you run multiple applications in various containers with a single command.
+
+suppose we have the following containers 
+  1. Web app
+  2. Mysql
+  3. Redis
+ they are all present in a yaml file which is docker compose file from where you run these containers with a single command.

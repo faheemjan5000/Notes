@@ -1,0 +1,29 @@
+programming language
+Git
+github
+CI/CD(jenkins)
+Docker
+kubernetes
+Configuration management with puppet  :: when developer adds a new feature(ETS) it tells the opereational team to deploy it on all the environments
+ i.e dev, test , prod, svil, svil-run , svil-evo .... so if there are 200 environements the operational team will deploy the new feature in 200 
+environments(server) if the manager somedays says to increase the number of environments(servers) then it will be mor tedius for the operational team
+to deploy new feature to each environment(server) so to makes the life of operational team simpler and easy we introduce the configuration management
+tool i.e puppet . so these tools handle changes systematically
+
+1.puppet : uses master slave architecture
+
+2.Ansible : is simple open source IT engine which automates application deployment, intra service orchestration, cloud provisioning and many other IT tools
+
+3.Terraform : init -->> plan -->> apply -->> destroy
+  commands : 1.terraform init
+             2.terraform plan
+             3.terraform apply
+             4.terraform destroy
+
+06:02:11 Continuos Monitoring with Grafana :
+          continous DEV -->> CI -->> Continous testing -->> CD -->> Continous Monitoring(Grafana or other tools)
+          it is an automated process by which one can observe and detect compliance issues and security threats during each phase of the DevOps pipeline.
+          Grafana is a visualization monitoring tool. Grafana is a multi-platform open source analytics and interactive visualization web applications
+          it provides  CHARTS , GRAPHS , ALERTS
+
+08:07:54 Selenium : continous testing using selenium
