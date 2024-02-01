@@ -12,4 +12,4 @@ suppose we have the following containers
   1. Web app
   2. Mysql
   3. Redis
- they are all present in a yaml file which is docker compose file from where you run these containers with a single command.
+ they are all configured in a yaml file which is docker compose file from where you run these containers with a single command.

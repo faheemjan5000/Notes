@@ -1,3 +1,5 @@
+docker context use default
+
 0. minikube version  -->>> to see the if minikube is installed. it will return its version.
 
 1. minikube start --driver=docker     -->>> to start the single node cluster using docker driver
@@ -17,7 +19,7 @@ it will return a few lines chose the last line and run it. e.g the following lin
 so first we must change the directory and go to the directory of the project where there is dockerfile
 now build the docker image using the following command
 
-7. docker build -t springboot-k8s-demo:4.0 .  -->>it will create the image now to run it inside the pod we must create deployment object before(which manages pods) o use commands o use yaml file
+7. docker build -t springboot-k8s-demo:4.0 .  -->>it will create the image, and to run it inside the pod we must create deployment object before(which manages pods) o use commands o use yaml file
 
 8. kubectl create deployment deploymentname --image=springboot-k8s-demo:2.1 --port=8080
 Now to verify the deployment if its created or not use this
@@ -30,7 +32,7 @@ Now to verify the deployment if its created or not use this
 
 12. kubectl logs podName   -->> it will shows u the logs of a specific pod
 
-to make our pod i.e our docker image(APIs) available for outside world we must expose our deployment
+    to make our pod i.e our docker image(APIs) available for outside world we must expose our deployment
 
 13. kubectl expose deploymentName --type=NodePort          -->> nodePort is the service name
 it will return "service/deploymentName exposed"

@@ -1,0 +1,6 @@
+ECR = elastic container registry.
+
+previously we added our docker image to docker-hub and then pull it inside ECS(elastic container service). but since docker-hub is a public registry
+and everyone can access it so we upload our docker container to ECR. i.e amazon provides us a special registry for containers which is ECR where 
+we can upload our docker image, so in short ECR is a repository just like Docker-hub where we upload our docker images. and then directly pull them into ECS 
+cluster

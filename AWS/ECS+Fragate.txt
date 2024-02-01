@@ -1,0 +1,7 @@
+*first create docker image and push it to docker hub.
+
+from aws open ECS service , from there you can selct amazon Fragate and then inside create a 'task definition' there add the container repository etc from 
+docker hub.
+
+after that create the 'cluster'inside the ecs service and add this task definition to it from the drop down list of task definitions.
+after its created you can get the public ip address from it and it the port number to it to access your docker image i.e endpoints of ur application.

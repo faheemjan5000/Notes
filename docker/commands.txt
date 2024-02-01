@@ -1,0 +1,15 @@
+            ************** Basic docker commands *************
+docker images  / docker image ls
+docker ps
+docker build -t jarFileName .
+docker run -p 9090:8080 imageName
+docker stop containerId
+
+to deploy a docker image to docker hub, first add the tag and then deploy it using the following commands.
+*docker tag imageName tagName/imageName   e.g
+ docker tag docker-example.jar 333991jan/docker-example.jar
+ To verify it use the command "docker image ls" and you will see your image with the tag  e.g 333991jan/docker-example.jar
+
+Now the next step is to push this image to docker Hub......
+*docker push tageName/imageName e.g
+ docker push 333991jan/docker-example.jar
