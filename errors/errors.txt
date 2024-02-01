@@ -1,0 +1,13 @@
+1. invalid flag: --release -> [Help 1]  --->>> This means to change the java version i.e conflict in java version
+
+2. compilation error e.g javaClassName.java symbol not found, RestController not found etc etc
+   solution : it means lower the spring-boot version from higher i.e
+
+  <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+change the version to  <version>2.6.4</version>  it will work
