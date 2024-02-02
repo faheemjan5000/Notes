@@ -4,11 +4,11 @@ key pair i.e ssh to ec2 instance(vm)
 * After you create the EC2 instance , go to the folder where you have downloaded the ssh-key i.e key pair
 and execute the following command :
 
---- $ssh -i SSH-APP.pem ubuntu@public_ip_address_of_ec2_instance e.g ssh -i SSH-APP.pem ubuntu@13.53.132.127
+--- $ssh -i key_name.pem ubuntu@public_ip_address_of_ec2_instance e.g ssh -i key_name.pem ubuntu@13.53.132.127
 if it says your key is too open and not too secure then on windows terminal use the following three commands :
----icacls.exe SSH-APP.pem /reset
----icacls.exe SSH-APP.pem /grant:r "$($env:username):(r)"
----icacls.exe SSH-APP.pem /inheritance:r
+---icacls.exe key_name.pem /reset
+---icacls.exe key_name.pem /grant:r "$($env:username):(r)"
+---icacls.exe key_name.pem /inheritance:r
 on ubunto terminal its simple chmod 400 filename.pem .
 after that you will enter into your aws ec2 instance now execute the following commands
 
