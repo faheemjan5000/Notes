@@ -1,0 +1,8 @@
+
+This is how you call the beanstalk environment. you just call the URL of the Beanstalk and add the port number to it and your endpoint.
+but first must add the port number in the security group. so the example is like this : 
+
+http://samplespringthree.us-east-1.elasticbeanstalk.com:8080/call/hello
+
+
+http://url-from-beanstalk:port/endpoint

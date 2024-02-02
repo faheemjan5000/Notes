@@ -1,3 +1,15 @@
+ECS 
+Amazon elastic container service
+ECS is fully managed container orchestration service
+
+AWS Fargate:
+is a serverless compute engine for containers
+that works with ECS and it allows you to run
+containers without having provision,configure and scaling. it eliminates
+the need of EC2 instance. it manages containers, scale up,down etc
+
+        *****************Example*******************************
+
 *first create docker image and push it to docker hub.
 
 from aws open ECS service , from there you can selct amazon Fragate and then inside create a 'task definition' there add the container repository etc from 
