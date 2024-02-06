@@ -1,0 +1,4 @@
+EKS =  Elastic kubernetes service
+How to deploy spring-boot application on EKS(elastic kubernetes service).
+
+  spring-boot-app ----->>>> ECR ----->>>>  EKS
