@@ -13,3 +13,7 @@ to deploy a docker image to docker hub, first add the tag and then deploy it usi
 Now the next step is to push this image to docker Hub......
 *docker push tageName/imageName e.g
  docker push 333991jan/docker-example.jar
+
+
+DELETE : to delete all images
+command for windows : for /F %i in ('docker images -a -q') do docker rmi -f %i
