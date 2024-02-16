@@ -1,19 +1,29 @@
-version: '3.2'
+#DOCKER COMPOSE YML FILE
+version: '3.1'
 
 services:
   db:
     image: mysql
     environment:
-        MYSQL_ROOT_PASSWORD: 'root'
-        MYSQL_DATABASE: 'bank'
+        MYSQL_USER: root
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: bank
+        SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/MYSQL_DATABASE
+        SPRING_DATABASE_USERNAME: root
+        SPRING_DATABASE_PASSWORD: root
     ports:
-      - "3307:3306"
+      - 3306:3306
 
 
 
+POM
 ADD THIS DEPENDENCY TO POM FILE WHEN USE DOCKER COMPOSE
 
 <!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-docker-compose</artifactId>
 		</dependency>-->
+
+so basically normally you connect you spring-boot CRUD application to mysql server locally. but what with compose you just write a compose yml file where you add information
+about the database i.e user,password etc so when you run your spring-boot application it will pull mysql image from docker and it will connect your app to the DB in container running.
+so its simple.

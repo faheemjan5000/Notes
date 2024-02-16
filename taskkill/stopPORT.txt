@@ -1,0 +1,3 @@
+netstat -ano | findstr :3306  -->> it will return u the process listening on port 3306
+
+taskkill /PID 6060 /F    -->>6060 is the PID which is being killed
