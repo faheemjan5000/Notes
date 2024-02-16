@@ -38,7 +38,7 @@ Now connect the mysql container running to this network and then connect crud sp
             docker network inspect networkName
 
 Now we connect and run our spring application to this network using this command
-docker run -p 9090:8080 --name springImageName --net networkName -e MYSQL_HOST=mysqlContainerName -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 springImageName 
+docker run -p 9090:8080 --name choseContainerNameForSpringApp --net networkName -e MYSQL_HOST=mysqlContainerNameHere -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 springImageName 
      e.g
 docker run -p 9090:8080 --name bank-app --net firtnetwork -e MYSQL_HOST=mysqlcontainer -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 bank-app
  
