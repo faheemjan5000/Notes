@@ -1,4 +1,13 @@
-EKS =  Elastic kubernetes service
+  ************************ Java-techie amazon playlist *********************************
+video # 21
+EKS =  Elastic kubernetes service i.e it is kubernetes but it's managed by Amazon
 How to deploy spring-boot application on EKS(elastic kubernetes service).
 
   spring-boot-app ----->>>> ECR ----->>>>  EKS
+
+we do the following steps.
+ 1. create spring-boot application
+ 2. create Docker image
+ 3. push docker image to docker hub or ECR(we use ECR here)
+ 4. EKS will pull this image from ECR inside in aws
+

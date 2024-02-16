@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  db:
+    image: mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: 'root'
+        MYSQL_DATABASE: 'bank'
+    ports:
+      - "3307:3306"
+
+
+
+ADD THIS DEPENDENCY TO POM FILE WHEN USE DOCKER COMPOSE
+
+<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-docker-compose</artifactId>
+		</dependency>-->

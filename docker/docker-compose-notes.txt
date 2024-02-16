@@ -1,0 +1,4 @@
+docker compose : suppose you have multiple applications in various containers and all those containers are linked together so you don't want to run
+                 those containers one by one but you want to run them with a single command so that's when docker compose comes into picture. so
+                 with docker compose you run multiple applications in various containers with a single command.
+
