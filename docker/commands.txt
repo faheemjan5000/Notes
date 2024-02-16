@@ -19,5 +19,28 @@ DELETE : to delete all images
 command for windows : for /F %i in ('docker images -a -q') do docker rmi -f %i
 
 
-To run mysql image
+To run mysql image,first pull it from the server
+docker pull mysql
 docker run -p 3307:3306 --name containername -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=bank mysql:latest
+
+
+docker network :
+commands : docker network create networkName  -->>to create a network
+           docker network inspect networkid   -->>to inspect network
+           docker network ls  -->> to list all the networks
+
+Now connect the mysql container running to this network and then connect crud spring application to this network
+          
+            docker network connect networkName mysqlContainerName   e.g
+            docker network connect firtnetwork mysqlcontainer
+
+ now to check if the container got connected to the network run this command
+            docker network inspect networkName
+
+Now we connect and run our spring application to this network using this command
+docker run -p 9090:8080 --name springImageName --net networkName -e MYSQL_HOST=mysqlContainerName -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 springImageName 
+     e.g
+docker run -p 9090:8080 --name bank-app --net firtnetwork -e MYSQL_HOST=mysqlcontainer -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_PORT=3306 bank-app
+ 
+it will connect and run our application to the mysql container instance already running. so now you can use postman to test all ur APIs
+       e.g    ----->>>   http://localhost:9090/account/add
