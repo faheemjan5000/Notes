@@ -17,3 +17,7 @@ Now the next step is to push this image to docker Hub......
 
 DELETE : to delete all images
 command for windows : for /F %i in ('docker images -a -q') do docker rmi -f %i
+
+
+To run mysql image
+docker run -p 3307:3306 --name containername -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=bank mysql:latest
