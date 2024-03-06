@@ -1,0 +1,7 @@
+1. commit your code to the github
+2. build it using maven(it will create jar file) on jenkins server
+3. scan the jar file using sonarqube for any vulnarabilities in the code
+4. create docker image
+5. scan docker image with some tool
+6. push it to dockerhub or ECR in the case of AWS
+7. kubernetes pull that image and deploy it in the kubernetes cluster for that u can use another tool argo

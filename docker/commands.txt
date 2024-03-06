@@ -32,7 +32,7 @@ commands : docker network create networkName  -->>to create a network
 Now connect the mysql container running to this network and then connect crud spring application to this network
           
             docker network connect networkName mysqlContainerName   e.g
-            docker network connect firtnetwork mysqlcontainer
+            docker network connect firstnetwork mysqlcontainer
 
  now to check if the container got connected to the network run this command
             docker network inspect networkName
@@ -44,3 +44,10 @@ docker run -p 9090:8080 --name bank-app --net firtnetwork -e MYSQL_HOST=mysqlcon
  
 it will connect and run our application to the mysql container instance already running. so now you can use postman to test all ur APIs
        e.g    ----->>>   http://localhost:9090/account/add
+This is one way of doing this. the other way is to create a docker-compose.yml file and add two services to it one for spring-boot application and one for mysql db as from the video(girl's video) with link :
+https://www.youtube.com/watch?v=DwWkjEwsI4Q
+and use the command : docker-compose up but before create the docker image using the docker build command after that use docker-compose up command
+
+
+To access you APIs on docker container use the following host
+       http://host.docker.internal:8080/course/all

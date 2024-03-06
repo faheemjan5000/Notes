@@ -1,0 +1,17 @@
+shell script extension is ".sh" e.g hello.sh
+
+the first line of a script file is to tell the kernal which kind of shell it is. e.g
+#!/bin/bash  -->> bash type of shell.  example of a script :  first_script.sh
+
+*********************************************
+#!/bin/bash
+
+# This is the comment line. it wont be printed
+
+echo "this is the print function"
+echo "good morning"
+**********************************************
+
+to execute a .sh file the command is :  ./filename.sh
+but before that you must give it execution permission by using chmod command 
+e.g chmod 754 filename.sh  -->> it will give execution permission to this file.

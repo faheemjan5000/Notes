@@ -1,0 +1,8 @@
+docker_init is a new feature of docker with the help of docker init now we dont need to write
+docker file or docker compose file we ask the AI and it creates these files for us.
+thanks to docker team.
+
+commands :
+
+docker init  ---->> it will start asking you questios about java,port etc
+docker compose up --build   ----->> it will create you image and run the container ,test then

@@ -1,0 +1,61 @@
+This script do the following work...
+  1. cloning a repository
+  2. installing the neccessary plugins/dependencies
+  3. starting those plugins and tools
+  4. deploy the app i.e build docker image of the app and then run it.
+
+#!/bin/bash
+
+echo "starting script..."
+
+
+code_clone(){
+  echo "Cloning repository..."
+  git clone https://github.com/LondheShubham153/django-notes-app.git
+}
+
+install_requirements(){
+  echo "installing requirements..."
+  sudo apt-get update
+  sudo apt-get install docker.io nginx -y docker-compose
+}
+
+required_restarts(){
+      echo "restarting required tools..."
+      echo "giving permissions to enable restarts"
+      sudo chown $USER /var/run/docker.sock
+       # sudo systemctl enable docker  .. we dont want everytime to restart docker
+      sudo systemctl enable nginx
+      sudo systemcl restart docker
+}
+
+deploy(){
+        echo "deploy function is called..."
+        echo "building docker image..."
+        docker build -t notes-app .
+        echo "running docker image..."
+        # docker run -d -p 8000:8000 notes-app:latest   everytime using this command will give error as port 8000 is already cocupied. so we use 'docker-compose up' and install it also.
+        docker-compose up -d
+}
+
+echo "calling functions one by one ......."
+
+ if ! code_clone; then
+         echo "the code directory already exists so we CD to that directory for Dockerfile"
+         cd django-notes-app
+         ls -l
+ fi
+
+ if ! install_requirements; then
+         echo "installation failed."
+         exit 1
+ fi
+required_restarts
+  echo "*********************************DEPLOYMENT STARTS****************************************"
+if ! deploy; then
+        echo "deployment failed, mailing the admin"
+        #sendmail
+        exit 1
+fi
+
+echo "***********************DEPOYMENT DONE****************************************"
