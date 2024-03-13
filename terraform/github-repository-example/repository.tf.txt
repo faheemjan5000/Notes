@@ -1,0 +1,11 @@
+provider "github" {  //first we tell the terraform what to create ? like aws,azure,github etc
+  token = var.token
+}
+
+
+resource "github_repository" "repository-terraform-name" { //here we tell to terraform we want to create a repository on github.
+  name        = "my-terraform-repository-automation"
+  description = "this repository was created using terrafom"
+  visibility = "public"
+  auto_init = true
+}

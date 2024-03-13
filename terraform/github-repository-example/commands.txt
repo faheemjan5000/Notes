@@ -1,0 +1,6 @@
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+terrafom destroy --target resourcetype.specific-resourcename e.g  //to destroy specific resource
+terraform destroy --target github_repository.repository-terraform-name

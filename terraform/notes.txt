@@ -1,0 +1,2 @@
+terraform plan -var "variableName=value"
+terraform plan -var "username=faheem"

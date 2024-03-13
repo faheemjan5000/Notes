@@ -1,0 +1,6 @@
+resource "aws_key_pair" "terraform-key-name" {
+  key_name = "ssh-key-on-aws"
+  // public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDBh0Q8NJTuKilssjlP8j5XumiprfhywUDh7/lg2IOwaRYBFqiXW6/VY7SRDCA3cM/5maYi3URjnXL3OIH2LMPDo2itJ2+oTgKWz4dx2mULo/jvhe2FYkKpm3XxOUuetGaPdwIvOGO0Ngv9ILgPw4U7JeIPdYZTg3+ES3ZEzYqkwoG9Rdtd3iWXwlzQbh74QdNTU7FF90Vt5o+V2MkMbnisJDfs0zz/0TNgX6IEya4t3VuQtsD55xGteSYBOrCvJbs2iGI+wy+/zukUW7rcfWaOoLmTeR0fn+OltflsNSfuRzq54KNoTtjPt88ZRHW0Tr3RWx92ASYFnUYJX+ZhSiR8ga53d+ypsVuk5jDAwXz9xIwdV7ULSp2f2IO/2RlPFdzTglWLmxNjoQFUi7BHomZ+C7AUcgMlnXJJZ2RGncfckXIehz7k95LW3kiTaXLx9+cZpzMzKDm2iAs0hpODWx7XmNL0POaLMKA7aQqnPtbos61dQAXDoypnIn8ZKk9YWKc= itmaster/mmf.jan@AT-MJAN2"
+  //best practice is give the file name where there is public key saved.
+  public_key = file("${path.module}/id_rsa.pub")
+}
