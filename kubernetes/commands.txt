@@ -11,7 +11,7 @@ docker context use default
 4. kubectl get node  -->>> to see info about node
 
 
-5. minikube docker-env        -->>>> to allow kubernets to pull local docker images
+5. minikube docker-env | Invoke-Expression      (powershell)        -->>>> to allow kubernets to pull local docker images
 it will return a few lines chose the last line and run it. e.g the following line
  @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
 
