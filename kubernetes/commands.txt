@@ -39,9 +39,18 @@ it will return "service/deploymentName exposed"
 
 14. kubectl get service  -->> it will return your service information port etc
 
-15. minikube service serviceName --url    -->>>> it will return the url of the service with which you can access your container which is inside the pod
+15. minikube service serviceName --url    -->>>> it will return the url of the service with which you can access your container(application) which is inside the pod
 
 16. minikube dashboard  -->> it will gives you a url to see your dashboard.
+
+to enter into pods especially mysql pod
+17.  kubectl exec -it mysql-deployment-6bc47dfbd9-8vtjp /bin/bash
+     kubectl exec -it podName /bin/bash
+if it is mysql pod then use the following commands to enter into database
+18. mysql -h mysql -u root -p ---->> it will ask for password then enter password.
+19. show databases
+20. ;
+21. use databaseName
 
 $$minikube stop   -->> to stop the cluster
 $$minikube delete -->> to delete the cluster 

@@ -17,3 +17,12 @@ not we just put those informations in kubernetes secrets and configMap to make o
 ETCD : kubernetes uses etcd as a key-value database store. it stores the configuration of the
 kubernetes cluster in etcd.
 It stores all the secrets and configMap data inside etcd database.
+
+*************************************FROM UDEMY VIDEOS LECTURE*********************************
+Service helps us mapping a port on the node to the port of the pod.
+service has its own pod which it maps to the port(targetPort) of the pod and then its own port is mapped to the node port
+
+Node-port -----maps------>Service(port)-------maps---------->Pod(targetPort)
+
+Best way to test your k8s service is to get its url by using the following command
+minikube servie serviceName --url

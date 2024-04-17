@@ -1,0 +1,18 @@
+Helm is a package manager for kubernetes.
+It visualize the application as a package where all the dependencies will be packed together and the entire package can be shared and
+can be deployed into the kubernetes cluster.
+It facilitates to upgrade and rollback the changes by maintaining the versions.
+It handles the complete life cycle of the application(create,install,upgrade,Rollback,Delete,status,Versioning).
+It can manage multiple environments with the same template. it manages any complex environment.
+
+untill now what we did is we created deployment.yaml and service.yaml files for creating deployment and service for a specific docker image
+e.g nginx,mysql etc
+
+in helm if we wanna get a deployment and service for lets say nginx or mysql or any other public images we must go to the helm hub
+and from there read the instruction for creating(installing) deployment and service for each specific images.
+for example for mysql we install it using this commmand:
+helm install --->>> it installs a chart e.g
+helm install stable/mysql --generate-name -->> it installs mysql chart ... these are all public charts. 
+
+we will create our own custom charts from the scratch using the command
+helm create chartName.
