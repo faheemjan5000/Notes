@@ -1,5 +1,5 @@
 (Java techie channel)
-Kubernetes is a container managment tool. it automates deploying scalling and managing containerized application.
+Kubernetes is a container managment tool. it automates deploying , scalling and managing containerized application.
     
 kubernetes is a set of machines called nodes.
 each node consists of pods and each pod consists of containers.
