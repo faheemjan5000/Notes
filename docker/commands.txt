@@ -1,4 +1,6 @@
             ************** Basic docker commands *************
+
+#### steps 1.maven build and create jar file 2.then you build image from that jar file 3.and then you run container of that image
 docker images  / docker image ls
 docker ps
 docker build -t jarFileName .
